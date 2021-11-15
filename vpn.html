@@ -100,9 +100,7 @@
     </div>
     <script type="text/javascript">
         document.getElementById("redirect-button").onclick = function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const returnPage = urlParams.get('return-page');
-            location.href = returnPage;
+            location.href = window.location.origin;
         };
     </script>
 </body>
