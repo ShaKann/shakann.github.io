@@ -89,7 +89,7 @@
             <p>Sometimes this happens because your device is using software that hides your location.</p>
             <p>If you are using a VPN or similar tools that hide your location, please turn them off and try again.</p>
             <div>
-                <button class="redirect-button">I’ve turned off my VPN</button>
+                <button class="redirect-button" id="redirect-button">I’ve turned off my VPN</button>
             </div>
         </div>
     </div>
@@ -98,5 +98,13 @@
             The United Kingdom's international organisation for cultural relations and educational opportunities.<br />
             A registered charity: 209131 (England and Wales) SC037733 (Scotland).</p>
     </div>
+    <script type="text/javascript">
+        document.getElementById("redirect-button").onclick = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const returnPage = urlParams.get('return-page');
+            location.href = returnPage;
+        };
+    </script>
 </body>
+
 </html>
